@@ -41,7 +41,7 @@ int main()
       }
     }
 
-    int N = 4000;
+    int N = 1000;
     std::vector<double> results(N);
     high_resolution_clock::time_point t1 = high_resolution_clock::now();
 
@@ -61,8 +61,8 @@ int main()
     for (auto x : results) stddev+=pow(x-avg,2);
     stddev = sqrt(stddev/(N-1));
 
-    std::cout << "result: " <<  total/N << " standard deviation: " << stddev << std::endl;
+    std::cout << "Average result of " << N << " simulations: " <<  total/N << " standard deviation: " << stddev << std::endl;
 
-    std::cout << "Time Elapsed: " << time_span.count();
+    std::cout << "Time Elapsed: " << time_span.count() << std::endl;
 
 }
